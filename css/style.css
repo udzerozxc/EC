@@ -1,0 +1,355 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+/* fontawesome */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+*{margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+    margin-top: 100px;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #e6e6e6;
+    text-align: center;
+}
+/*タイトルなどの左右につける横線*/
+.title-border {
+    display: flex;
+    align-items: center;
+}
+.title-border:before,
+.title-border:after {
+    border-top: 1px solid;
+    content: "";
+    flex-grow: 1;
+}
+.title-border:before {
+    margin-right: 1rem;
+}
+.title-border:after {
+    margin-left: 1rem;
+}
+/*横線ここまで*/
+
+/*ヘッダーCSS*/
+a{
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+header{
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    padding: 30px 4% 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1{
+    margin: 0; padding: 0;
+    font-size: 30px;
+}
+
+li{
+    margin: 0 0 0 15px;
+    font-size: 14px;
+}
+
+nav{
+    margin: 0 0 0 auto;
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+ }
+
+.head a{
+    color: black;
+    text-decoration: none;
+}
+
+.itemList:hover, .login:hover, .logout:hover, .cart:hover{
+    border-bottom: solid 1px #111;
+}
+
+/*検索ボックス*/
+#searchform{
+    box-sizing: border-box;
+    position: relative;
+    border: 2px solid #4b4b4b;
+    display: block;
+    padding: 3px 10px;
+    height: 2.3em;
+    width: 260px;
+    overflow: hidden;
+}
+#searchform input[type="search"]{
+    border: none;
+    height: 2.0em;
+    width: 300px;
+    margin: auto;
+}
+#searchform input[type="search"]:focus {
+    outline: 0;
+}
+#searchform button[type="submit"]{
+    cursor: pointer;
+    font-size: 1.3em;
+    border: none;
+    background-color: #4b4b4b;
+    color: #fff;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    right: 0;
+    top: -10px;
+    outline : none;
+}
+/*検索ボックスここまで*/
+
+/*ヘッダーCSSここまで*/
+
+/*トップページbody*/
+a:hover{
+    opacity: 0.8;
+}
+
+.item_category{
+    width: 1000px;
+    margin: 3em auto;
+    padding: 10px 1em;
+    border: #4b4b4b;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* ログイン画面 */
+
+.form-wrapper {
+    background: #fafafa;
+    margin: 3em auto;
+    padding: 0 1em;
+    max-width: 370px;
+    vertical-align: middle
+}
+
+.log-h1 {
+    text-align: center;
+    padding: 1em 0;
+}
+
+form {
+    padding: 0 1.5em;
+}
+
+.form-item {
+    margin-bottom: 0.75em;
+    width: 100%;
+}
+
+.form-item input {
+    background: #fafafa;
+    border: none;
+    border-bottom: 2px solid #e9e9e9;
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    height: 50px;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.form-item input:focus {
+    border-bottom: 2px solid #c0c0c0;
+    outline: none;
+}
+
+.button-login {
+    margin: 2em 0 0;
+    width: 100%;
+}
+
+.button-login .button {
+    background: #535353;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+.button:hover {
+    background: #6d6d6d;
+}
+
+.form-footer {
+    font-size: 1em;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.form-footer a {
+    color: #8c8c8c;
+    text-decoration: none;
+    transition: border-color 0.3s;
+}
+
+.form-footer a:hover {
+    border-bottom: 1px dotted #8c8c8c;
+}
+
+/* ログインエラー画面*/
+.err{
+    width: 1000px;
+    background-color: #cccccc;
+    padding: 40px 5px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.red{ color: #f94e4e; }
+
+/* ログイン画面ここまで */
+
+/*新規登録画面*/
+.sign {
+    width: 1000px;
+    margin: 50px auto;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 );
+    line-height: 1.8;
+    padding: 20px;
+}
+table {
+    border-collapse: collapse;
+    text-align: left;
+    margin: auto;
+    width: 900px;
+}
+
+td {
+    border: solid 1px #888888;
+    padding-left: 10px;
+    margin: auto;
+}
+
+.required {
+    color: #ececec;
+    background-color: #ff4747;
+    border-radius: 3px;
+    padding: 1px 3px;
+}
+.optional {
+    color: #ececec;
+    background-color: #007bd5;
+    border-radius: 3px;
+    padding: 1px 3px;
+}
+.td1 {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+}
+
+.td3 {
+    width: 500px;
+}
+
+td input {
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 4px gray;
+    height: 30px;
+}
+td ::placeholder { padding-left: 5px; }
+
+.createButton {
+    padding: 20px 200px;
+    color: white;
+    background-color: #8c8c8c;
+    border: none;
+    border-radius: 7px;
+    font-size: large;
+    margin-top: 20px;
+}
+.createButton:hover {
+    opacity: 0.8;
+}
+/*新規登録画面ここまで*/
+
+/*新規登録リザルト画面*/
+.user-result {
+    width: 1000px;
+    margin: 150px auto;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 );
+    line-height: 1.8;
+    padding: 20px;
+}
+
+.user-result-msg { padding: 30px; }
+
+.user-result-top, .user-result-items {
+    color: #4b4b4b;
+}
+/*新規登録リザルト画面ここまで*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
